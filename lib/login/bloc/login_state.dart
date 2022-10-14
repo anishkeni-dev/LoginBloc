@@ -15,7 +15,10 @@ class LoginState extends StatelessWidget {
 
 class LoginInitialState extends LoginState{}
 
-class LoginValidState extends LoginState{}
+class LoginValidState extends LoginState{
+  String  validity = '';
+  LoginValidState(this.validity);
+}
 
 
 class LoginErrorState extends LoginState{

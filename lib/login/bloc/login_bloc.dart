@@ -15,7 +15,7 @@ class LoginBloc extends Bloc<LoginEvent,LoginState>{
 
 //user exists
       if (event.unamevalue == 'anish' && event.passwordvalue == 'pass') {
-        emit(LoginValidState());
+        emit(LoginValidState("all good"));
 
       }
 

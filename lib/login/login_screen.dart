@@ -36,14 +36,19 @@ class _MyLoginPageState extends State<MyLoginPage> {
                   builder:( context, state ){
                     //checking if There's an error in Loginstate
                     if(state is LoginErrorState){
-
                       return Text(state.errormessage,
                       style: TextStyle(color: Colors.white),);
-
+                        }
+                    else if(state is LoginValidState){
+                      return Text(state.validity,
+                        style: TextStyle(color: Colors.white),);
                         }
                     else{
-                          return Container();
-                        }
+                      return Container(
+
+                      );
+
+                    }
                    }
                    ),
               Container(
