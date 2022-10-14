@@ -20,7 +20,9 @@ class MyLoginPage extends StatefulWidget {
 class _MyLoginPageState extends State<MyLoginPage> {
   final pcontroller = TextEditingController();
   final ucontroller = TextEditingController();
+
   @override
+
   Widget build(BuildContext context) {
     return Container(
       decoration: getbackground(),
@@ -34,11 +36,13 @@ class _MyLoginPageState extends State<MyLoginPage> {
               SizedBox(height: 20,),
               BlocBuilder<LoginBloc,LoginState>(
                   builder:( context, state ){
+
                     //checking if There's an error in Loginstate
                     if(state is LoginErrorState){
                       return Text(state.errormessage,
                       style: TextStyle(color: Colors.white),);
                         }
+                    //if the login is valid
                     else if(state is LoginValidState){
                       return Text(state.validity,
                         style: TextStyle(color: Colors.white),);

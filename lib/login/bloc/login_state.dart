@@ -13,7 +13,10 @@ class LoginState extends StatelessWidget {
 }
 
 
-class LoginInitialState extends LoginState{}
+class LoginInitialState extends LoginState{
+
+  //check if the user exists
+}
 
 class LoginValidState extends LoginState{
   String  validity = '';

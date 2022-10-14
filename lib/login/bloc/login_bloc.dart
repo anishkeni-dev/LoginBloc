@@ -10,6 +10,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class LoginBloc extends Bloc<LoginEvent,LoginState>{
   LoginBloc(): super(
       LoginInitialState()){
+    //works on login text changed
     on<LogInTextChangedEvent>((event, emit) {
 
 
@@ -31,6 +32,8 @@ class LoginBloc extends Bloc<LoginEvent,LoginState>{
 
     });
 
+
+    //works if login is valid
     on<LoginSumittedEvent>((event, emit) {
       if(state is LoginValidState ) {
         Get.to(HomePage());
