@@ -12,6 +12,6 @@ class LoginSumittedEvent extends LoginEvent{
   String? username;
   String? password;
 
-  LoginSumittedEvent(this.username,this.password);
+  LoginSumittedEvent(this.username,this.password,);
 }
 

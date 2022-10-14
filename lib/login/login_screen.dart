@@ -34,6 +34,7 @@ class _MyLoginPageState extends State<MyLoginPage> {
               SizedBox(height: 20,),
               BlocBuilder<LoginBloc,LoginState>(
                   builder:( context, state ){
+                    //checking if There's an error in Loginstate
                     if(state is LoginErrorState){
 
                       return Text(state.errormessage,
@@ -130,11 +131,7 @@ class _MyLoginPageState extends State<MyLoginPage> {
                             LoginSumittedEvent(
                                 ucontroller.text, pcontroller.text)
                         );
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context)=> HomePage()
-                            ));
+
                       }
 
                     },

@@ -1,11 +1,15 @@
 
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import '../../home.dart';
 import 'login_event.dart';
 import 'login_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 
 class LoginBloc extends Bloc<LoginEvent,LoginState>{
-  LoginBloc(): super(LoginInitialState()){
+  LoginBloc(): super(
+      LoginInitialState()){
     on<LogInTextChangedEvent>((event, emit) {
 
 
@@ -28,8 +32,9 @@ class LoginBloc extends Bloc<LoginEvent,LoginState>{
     });
 
     on<LoginSumittedEvent>((event, emit) {
-        emit(LoginLoadingState());
-    });
+      if(state is LoginValidState ) {
+        Get.to(HomePage());
+      }});
   }
 }
 

@@ -15,8 +15,7 @@ class LoginState extends StatelessWidget {
 
 class LoginInitialState extends LoginState{}
 
-class LoginValidState extends LoginState{
- }
+class LoginValidState extends LoginState{}
 
 
 class LoginErrorState extends LoginState{
